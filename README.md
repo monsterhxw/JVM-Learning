@@ -29,7 +29,7 @@ Java 虚拟机在内存中划分出**堆**和**栈**来存储运行时数据。
   这个**栈帧**是提前计算好的，而且 Java 虚拟机**不要求栈帧在内存空间里连续分布**。
 
   当**退出当前执行的方法时**，不管是正常返回还是异常返回，Java 虚拟机均会**弹出当前线程的当前栈帧**，并将之舍弃。
-![jvm_run](/Users/monstervivi/Desktop/JVM/images/jvm_run.png)
+![jvm_run](https://github.com/monsterhxw/JVM-Learning/blob/master/images/jvm_run.png)
 
 #### 硬件角度：
 **Java 字节码无法直接运行。所以 Java 虚拟机需要将字节码翻译成为机器码。**
@@ -45,4 +45,4 @@ Java 虚拟机在内存中划分出**堆**和**栈**来存储运行时数据。
 HotSpot 虚拟机为了**提高运行效率，默认采用混合模式**，综合了解释和即时编译两者的优点。它会**先解释执行字节码**，而**后将其中反复执行的热点代码，以方法为单位进行即时编译**，翻译成机器码后直接运行在底层硬件之上。
 
 HotSpot 装载了多个不同的即时编译器，以便在编译时间和生成代码的执行效率之间做取舍。
-![jvm_compilation](/Users/monstervivi/Desktop/JVM/images/jvm_compilation.png)
+![jvm_compilation](https://github.com/monsterhxw/JVM-Learning/blob/master/images/jvm_compilation.png)
